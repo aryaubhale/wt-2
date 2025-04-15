@@ -1,5 +1,10 @@
 // Base URL of your backend
-const API_URL = 'http://localhost:3000/api/expenses';
+const API_BASE = window.location.hostname === "localhost"
+  ? "http://localhost:3000"
+  : "https://wt-2-2pbb.onrender.com";
+
+fetch(`${API_BASE}/api/expenses`);
+
 
 // HTML element references
 const form = document.getElementById('expenseForm');
