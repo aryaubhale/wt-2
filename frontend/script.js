@@ -1,17 +1,13 @@
 // Base URL of your backend
 const API_URL = "https://expense-tracker-api.onrender.com";
 
-
-fetch(`${API_BASE}/api/expenses`);
-
-
 // HTML element references
 const form = document.getElementById('expenseForm');
 const expenseList = document.getElementById('expenseList');
 
 // Fetch and display expenses
 async function loadExpenses() {
-  const res = await fetch(API_URL);
+  const res = await fetch(`${API_URL}/api/expenses`);
   const data = await res.json();
   expenseList.innerHTML = '';
 
@@ -36,7 +32,7 @@ form.addEventListener('submit', async (e) => {
     date: document.getElementById('date').value
   };
 
-  await fetch(API_URL, {
+  await fetch(`${API_URL}/api/expenses`, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(expense)
@@ -48,7 +44,7 @@ form.addEventListener('submit', async (e) => {
 
 // Delete an expense
 async function deleteExpense(id) {
-  await fetch(`${API_URL}/${id}`, {
+  await fetch(`${API_URL}/api/expenses/${id}`, {
     method: 'DELETE'
   });
   loadExpenses();
