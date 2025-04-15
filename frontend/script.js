@@ -1,7 +1,6 @@
 // Base URL of your backend
-const API_BASE = window.location.hostname === "localhost"
-  ? "http://localhost:3000"
-  : "https://wt-2-2pbb.onrender.com";
+const API_URL = "https://wt-2-2pbb.onrender.com";
+
 
 fetch(`${API_BASE}/api/expenses`);
 
