@@ -1,5 +1,5 @@
 // Base URL of your backend
-const API_URL = "https://expense-tracker-api.onrender.com";
+const API_URL = "https://wt-2-2pbb.onrender.com";
 
 // HTML element references
 const form = document.getElementById('expenseForm');
