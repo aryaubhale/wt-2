@@ -1,5 +1,5 @@
 // Base URL of your backend
-const API_URL = "https://wt-2-2pbb.onrender.com";
+const API_URL = "https://expense-tracker-api.onrender.com";
 
 
 fetch(`${API_BASE}/api/expenses`);
